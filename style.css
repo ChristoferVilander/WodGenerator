@@ -27,8 +27,7 @@ header {
   align-items: center;
 }
 
-#difficultBtn,
-#easyBtn {
+#generateBtn {
   width: 10em;
   height: 3.5em;
   left: 12em;
