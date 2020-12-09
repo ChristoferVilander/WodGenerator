@@ -1,14 +1,14 @@
 function wodGenerator() {
   let workouts = [
-    "Snatch x 6 (60%/35%)",
-    "Clean and Jerk x 6 (60%/35v)",
+    "Snatch x 6 (60%)",
+    "Clean and Jerk x 6 (60%)",
     "Wallbals x 10 (9kg/6kg)",
     "Pull Ups x 10",
-    "DL x 6 (60%/35%)",
+    "DL x 6 (60%)",
     "Burpees x 10",
-    "Kettlebell Swing x 5 22.5kg/17.55kg",
+    "Kettlebell Swing x 5 (22.5kg/17.55kg)",
     "Box Jump x 10",
-    "TTB 10",
+    "TTB x 10",
     "Air Bike 15 Cal",
     "Row 15 Cal",
     "Push Ups x 20",
@@ -28,11 +28,11 @@ function wodGenerator() {
     }
   }
 
-  // Dom Elements
   let wodContainer = document.getElementById("wodList");
   let ulItem = document.createElement("ul");
   ulItem.setAttribute("id", "ulist");
   let ulID = document.getElementById("ulist");
+  let timeCap = "20 min";
 
   // If id 'ulist' exists it gets removed and then the createList function is executed, else it runs the createList straight away
   if (wodContainer.hasChildNodes()) {
