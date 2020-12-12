@@ -28,19 +28,10 @@ function wodGenerator() {
     }
   }
 
-<<<<<<< HEAD
-  // Dom Elements
   let wodContainer = document.querySelector(".wodList");
   let ulItem = document.createElement("ul");
   ulItem.setAttribute("class", "ulist");
   let ulID = document.querySelector(".ulist");
-=======
-  let wodContainer = document.getElementById("wodList");
-  let ulItem = document.createElement("ul");
-  ulItem.setAttribute("id", "ulist");
-  let ulID = document.getElementById("ulist");
-  let timeCap = "20 min";
->>>>>>> e28b801e0bfcf69d7589a119ab7a4fe7bcdc5d7f
 
   // If id 'ulist' exists it gets removed and then the createList function is executed, else it runs the createList straight away
   if (wodContainer.hasChildNodes()) {

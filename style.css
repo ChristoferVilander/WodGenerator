@@ -6,25 +6,6 @@
 html,
 body {
   background-image: linear-gradient(180deg, #a55cf8, #841cfa);
-<<<<<<< HEAD
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-size: 100;
-  height: 100%;
-  width: 100%;
-}
-
-h1 {
-  font-size: 32px;
-}
-
-p {
-  font-size: 16px;
-}
-
-header {
-  padding: 25px 0 0 0;
-=======
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -33,8 +14,7 @@ header {
 }
 
 header {
-  padding: 20px;
->>>>>>> e28b801e0bfcf69d7589a119ab7a4fe7bcdc5d7f
+  padding: 25px;
   justify-content: center;
   text-align: center;
 }
@@ -49,34 +29,14 @@ li {
 }
 
 .btnMenu {
-<<<<<<< HEAD
-  padding: 50px 0 0 0;
-=======
-  margin: 15px 0 0 0;
->>>>>>> e28b801e0bfcf69d7589a119ab7a4fe7bcdc5d7f
+  padding: 25 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-<<<<<<< HEAD
 .generateBtn {
-  width: 10em;
-  height: 3.5em;
-  background-color: transparent;
-  text-align: center;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.wodList {
-  padding: 50px 0 0 0;
-=======
-#generateBtn {
-  margin: 20px;
+  margin: 50px 0 0 0;
   width: 150px;
   height: 50px;
   border-radius: 5px;
@@ -87,16 +47,14 @@ li {
   color: #fff;
 }
 
-#wodList {
-  position: relative;
-  top: 20px;
+.wodList {
+  padding: 50px 0 0;
   margin: 0 auto;
   width: 300px;
 }
 
 footer {
   position: fixed;
->>>>>>> e28b801e0bfcf69d7589a119ab7a4fe7bcdc5d7f
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +64,7 @@ footer {
   height: 50px;
 }
 
-#wodList ul {
+.wodList ul {
   list-style-type: none;
 }
 
