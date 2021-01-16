@@ -2,11 +2,11 @@ function wodGenerator() {
   let workouts = [
     "Snatch x 6 (60%)",
     "Clean and Jerk x 6 (60%)",
-    "Wallbals x 10 (9kg/6kg)",
+    "Wallbals x 10 (9kg / 6kg)",
     "Pull Ups x 10",
     "DL x 6 (60%)",
     "Burpees x 10",
-    "Kettlebell Swing x 5 (22.5kg/17.55kg)",
+    "Kettlebell Swing x 5 (22.5kg / 17.55kg)",
     "Box Jump x 10",
     "TTB x 10",
     "Air Bike 15 Cal",
@@ -18,6 +18,12 @@ function wodGenerator() {
 
   function createList() {
     wodContainer.appendChild(ulItem);
+
+    let timeCap = document.createElement("li");
+
+    timeCap.innerHTML = "<b>20 min AMRAP</b>";
+
+    ulItem.appendChild(timeCap);
 
     for (var i = 0; i < 4; i++) {
       let wodItem = document.createElement("li");
