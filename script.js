@@ -14,7 +14,7 @@ function wodGenerator() {
     "Push Ups x 20",
   ];
 
-  // This function creates a list of 4 random workouts
+  // This function creates a list of 4 random workouts.
 
   function createList() {
     wodContainer.appendChild(ulItem);
@@ -28,7 +28,12 @@ function wodGenerator() {
     for (var i = 0; i < 4; i++) {
       let wodItem = document.createElement("li");
 
-      wodItem.innerHTML = workouts[Math.floor(Math.random() * workouts.length)];
+      let shuffle = workouts[Math.floor(Math.random() * workouts.length)];
+      let arrayIndex = workouts.indexOf(shuffle);
+
+      workouts.splice(arrayIndex, 1); // Removes shuffled items to prevent duplicates
+
+      wodItem.innerHTML = shuffle;
 
       ulItem.appendChild(wodItem);
     }
