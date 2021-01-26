@@ -14,31 +14,6 @@ function wodGenerator() {
     "Push Ups x 20",
   ];
 
-  // This function creates a list of 4 random workouts.
-
-  function createList() {
-    wodContainer.appendChild(ulItem);
-
-    let timeCap = document.createElement("li");
-
-    timeCap.innerHTML = "<b>20 min AMRAP</b>";
-
-    ulItem.appendChild(timeCap);
-
-    for (var i = 0; i < 4; i++) {
-      let wodItem = document.createElement("li");
-
-      let shuffle = workouts[Math.floor(Math.random() * workouts.length)];
-      let arrayIndex = workouts.indexOf(shuffle);
-
-      workouts.splice(arrayIndex, 1); // Removes shuffled items to prevent duplicates
-
-      wodItem.innerHTML = shuffle;
-
-      ulItem.appendChild(wodItem);
-    }
-  }
-
   let wodContainer = document.querySelector(".wodList");
   let ulItem = document.createElement("ul");
   ulItem.setAttribute("class", "ulist");
@@ -51,7 +26,44 @@ function wodGenerator() {
   } else {
     createList();
   }
+
+  // This function creates a list of 4 random workouts.
+  function createList() {
+    wodContainer.appendChild(ulItem);
+
+    let timeCap = document.createElement("li");
+
+    timeCap.innerHTML = "<b>20 min AMRAP</b>";
+
+    ulItem.appendChild(timeCap);
+
+    for (var i = 0; i < 4; i++) {
+      let wodItem = document.createElement("li");
+      let shuffle = workouts[Math.floor(Math.random() * workouts.length)];
+      let arrayIndex = workouts.indexOf(shuffle);
+
+      workouts.splice(arrayIndex, 1); // Removes shuffled items to prevent duplicates
+
+      wodItem.innerHTML = shuffle;
+
+      ulItem.appendChild(wodItem);
+    }
+  }
+
+  function saveWod() {
+    // Saves the latest generated WOD to Local Storage
+    localStorage.setItem("savedItems", wodContainer.innerHTML);
+  }
+  saveWod();
 }
+
+// Restores latest WOD from Local Storage
+function restoreWod() {
+  let wodContainer = document.querySelector(".wodList");
+  wodContainer.innerHTML = localStorage.getItem("savedItems");
+}
+
+restoreWod();
 
 // Clicking the button executes the function wodGenerator
 let generatebutton = document.querySelector(".generateBtn");
