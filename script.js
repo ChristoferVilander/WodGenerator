@@ -11,6 +11,7 @@ function wodGenerator() {
     "TTB x 10",
     "Air Bike 15 Cal",
     "Row 15 Cal",
+    "HSPU x 8",
     "Push Ups x 20",
   ];
 
@@ -68,3 +69,45 @@ restoreWod();
 // Clicking the button executes the function wodGenerator
 let generatebutton = document.querySelector(".generateBtn");
 generatebutton.onclick = wodGenerator;
+
+// Timer, inkl start and stop btn
+
+function go() {
+  let timeRepeat = setInterval(timer, 1000);
+
+  let sec = 0;
+  let min = 0;
+
+  let minDiv = document.querySelector(".min");
+  let secDiv = document.querySelector(".sec");
+
+  function timer() {
+    if (sec === 60) {
+      min++;
+      sec = 0;
+    }
+
+    sec++;
+
+    minDiv.innerHTML = sec;
+    secDiv.innerHTML = min;
+
+    console.log(sec, min);
+
+    if (min === 20) {
+      clearInterval(timeRepeat);
+      minDiv.innerHTML = "";
+      secDiv.innerHTML = "Time is Up!";
+    }
+  }
+
+  function stoppa() {
+    clearInterval(timeRepeat);
+  }
+  let stopBtn = document.getElementById("stopBtn");
+  stopBtn.onclick = stoppa;
+}
+
+let startBtn = document.getElementById("startBtn");
+
+startBtn.onclick = go;
