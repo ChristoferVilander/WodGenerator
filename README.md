@@ -1,4 +1,4 @@
-# WodGenerator
+# Workout Generator
 
 ## Project Status
  - In development
