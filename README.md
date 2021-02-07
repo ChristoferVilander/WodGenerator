@@ -1,4 +1,4 @@
-# WodGenerator
+# Workout of the Day Generator
 
 ## Project Status
  - In development
