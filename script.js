@@ -32,9 +32,9 @@ function wodGenerator() {
   function createList() {
     wodContainer.appendChild(ulItem);
 
-    let timeCap = document.createElement("li");
+    let timeCap = document.createElement("h2");
 
-    timeCap.innerHTML = "<b>20 min AMRAP</b>";
+    timeCap.innerHTML = "20 min AMRAP";
 
     ulItem.appendChild(timeCap);
 
@@ -48,6 +48,7 @@ function wodGenerator() {
       wodItem.innerHTML = shuffle;
 
       ulItem.appendChild(wodItem);
+      startBtn.style.visibility = "visible";
     }
   }
 
@@ -78,8 +79,8 @@ function go() {
   let sec = 0;
   let min = 0;
 
-  let minDiv = document.querySelector(".min");
-  let secDiv = document.querySelector(".sec");
+  let minDiv = document.getElementById("minOne");
+  let secDiv = document.getElementById("secOne");
 
   function timer() {
     if (sec === 60) {
@@ -89,10 +90,8 @@ function go() {
 
     sec++;
 
-    minDiv.innerHTML = sec;
-    secDiv.innerHTML = min;
-
-    console.log(sec, min);
+    minDiv.innerHTML = "<b>Min:</b> " + min;
+    secDiv.innerHTML = "<b>Sec:</b> " + sec;
 
     if (min === 20) {
       clearInterval(timeRepeat);
@@ -101,9 +100,12 @@ function go() {
     }
   }
 
+  // Stop Timer
+
   function stoppa() {
     clearInterval(timeRepeat);
   }
+
   let stopBtn = document.getElementById("stopBtn");
   stopBtn.onclick = stoppa;
 }
