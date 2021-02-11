@@ -71,16 +71,20 @@ restoreWod();
 let generatebutton = document.querySelector(".generateBtn");
 generatebutton.onclick = wodGenerator;
 
-// Timer, inkl start and stop btn
+// Timer, incl start and stop btn
 
 function go() {
   let timeRepeat = setInterval(timer, 1000);
-
   let sec = 0;
   let min = 0;
-
   let minDiv = document.getElementById("minOne");
   let secDiv = document.getElementById("secOne");
+  let btnText = document.getElementById("btnText");
+  let statement = true;
+  document.querySelector(".startBtn").setAttribute("id", "stopp");
+
+  btnText.innerHTML = "Stop";
+  console.log(1);
 
   function timer() {
     if (sec === 60) {
@@ -104,12 +108,24 @@ function go() {
 
   function stoppa() {
     clearInterval(timeRepeat);
-  }
+    btnText.innerHTML = "Reset";
 
-  let stopBtn = document.getElementById("stopBtn");
-  stopBtn.onclick = stoppa;
+    document.getElementById("stopp").onclick = function () {
+      if ((btnText.innerHTML = "Reset" && statement === true)) {
+        let btnText = document.getElementById("btnText");
+        btnText.innerHTML = "Start";
+        minDiv.innerHTML = "<b>Min:</b> " + "0";
+        secDiv.innerHTML = "<b>Sec:</b> " + "0";
+        statement = false;
+        console.log(7);
+      } else {
+        go();
+      }
+    };
+  }
+  document.getElementById("stopp").onclick = stoppa;
 }
 
-let startBtn = document.getElementById("startBtn");
+let startBtn = document.querySelector(".startBtn");
 
 startBtn.onclick = go;

@@ -87,7 +87,7 @@ ul {
   cursor: pointer;
 }
 
-#startBtn {
+.startBtn {
   margin: 25px 15px 0 0;
   width: 100px;
   height: 100px;
@@ -101,8 +101,9 @@ ul {
   visibility: hidden;
 }
 
-#stopBtn {
+.stopBtn {
   display: none;
+  visibility: none;
 }
 
 .wodList,
