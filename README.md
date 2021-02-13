@@ -1,21 +1,24 @@
 # Workout of the Day Generator
 
 ## Project Status
- - In development
- 
+
+- In development
+
 ## Intro
+
 This is by no means an original idea. There are surely thousands of similiar and more advanced applications out there, but it was either this or a todo-list since the main goal of this little project is to develop my knowledge within HTML, CSS and JavaScript.
 
-With that said, this is a Web App that generates a random WOD (Workout of the Day) that you can use when you don't have the inspiration (or plan) to come up with your own. The first version will be a simple page with a button that, onclick, will generate a random WOD based on 4 different exercises with a timecap of 20 minute, but the scope will grow as I move along. 
+With that said, this is a Web App that generates a random WOD (Workout of the Day) that you can use when you don't have the inspiration (or plan) to come up with your own. The first version will be a simple page with a button that, onclick, will generate a random WOD based on 4 different exercises with a timecap of 20 minute, but the scope will grow as I move along.
 
 ## Technologies
-HTML, CSS and JavaScript 
+
+HTML, CSS and JavaScript
 
 ## License
 
 MIT License
 
-Copyright (c) [2020] [Christofer Vilander]
+Copyright (c) [2021] [Christofer Vilander]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

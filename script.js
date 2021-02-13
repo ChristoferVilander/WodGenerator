@@ -34,7 +34,7 @@ function wodGenerator() {
 
     let timeCap = document.createElement("h2");
 
-    timeCap.innerHTML = "20 min AMRAP";
+    timeCap.innerHTML = "<b>20 min AMRAP</b>";
 
     ulItem.appendChild(timeCap);
 
@@ -84,7 +84,6 @@ function go() {
   document.querySelector(".startBtn").setAttribute("id", "stopp");
 
   btnText.innerHTML = "Stop";
-  console.log(1);
 
   function timer() {
     if (sec === 60) {
@@ -117,7 +116,6 @@ function go() {
         minDiv.innerHTML = "<b>Min:</b> " + "0";
         secDiv.innerHTML = "<b>Sec:</b> " + "0";
         statement = false;
-        console.log(7);
       } else {
         go();
       }
