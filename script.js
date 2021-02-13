@@ -93,8 +93,8 @@ function go() {
 
     sec++;
 
-    minDiv.innerHTML = "<b>Min:</b> " + min;
-    secDiv.innerHTML = "<b>Sec:</b> " + sec;
+    minDiv.innerHTML = "Min: " + min;
+    secDiv.innerHTML = "Sec: " + sec;
 
     if (min === 20) {
       clearInterval(timeRepeat);
