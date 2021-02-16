@@ -33,7 +33,8 @@ function wodGenerator() {
     wodContainer.appendChild(ulItem);
 
     let timeCap = document.createElement("h2");
-
+    timeCap.id = "tc";
+    timeCap.className = "animate";
     timeCap.innerHTML = "<b>20 min AMRAP</b>";
 
     ulItem.appendChild(timeCap);
@@ -47,7 +48,7 @@ function wodGenerator() {
 
       wodItem.innerHTML = shuffle;
 
-      ulItem.appendChild(wodItem);
+      ulItem.appendChild(wodItem).className = "animate";
       startBtn.style.visibility = "visible";
     }
   }
