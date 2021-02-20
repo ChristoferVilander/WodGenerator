@@ -35,7 +35,7 @@ function wodGenerator() {
     let timeCap = document.createElement("h2");
     timeCap.id = "tc";
     timeCap.className = "animate";
-    timeCap.innerHTML = "<b>20 min AMRAP</b>";
+    timeCap.innerHTML = "20 min AMRAP";
 
     ulItem.appendChild(timeCap);
 
@@ -72,8 +72,7 @@ restoreWod();
 let generatebutton = document.querySelector(".generateBtn");
 generatebutton.onclick = wodGenerator;
 
-// Timer, incl start and stop btn
-
+// Timer, incl start and stop btn (should be rebuilt, since this is not a good solution)
 function go() {
   let timeRepeat = setInterval(timer, 1000);
   let sec = 0;
@@ -105,7 +104,6 @@ function go() {
   }
 
   // Stop Timer
-
   function stoppa() {
     clearInterval(timeRepeat);
     btnText.innerHTML = "Reset";
@@ -114,8 +112,8 @@ function go() {
       if ((btnText.innerHTML = "Reset" && statement === true)) {
         let btnText = document.getElementById("btnText");
         btnText.innerHTML = "Start";
-        minDiv.innerHTML = "<b>Min:</b> " + "0";
-        secDiv.innerHTML = "<b>Sec:</b> " + "0";
+        minDiv.innerHTML = "Min: " + "0";
+        secDiv.innerHTML = "Sec: " + "0";
         statement = false;
       } else {
         go();
