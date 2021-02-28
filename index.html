@@ -4,36 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" 
-content="Generate random workouts"></head>
-
-    <link rel="stylesheet" href="./style.css" />
     <title>Workout Generator</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="logo">Workout Generator</h1>
-      <p>Time for today's workout</p>
-    </header>
+    <div class="flex-container">
+      <header>
+        <h1 class="logo">Workout Generator</h1>
+      </header>
+      <menu
+        ><button class="generateBtn"><p>Generate</p></button></menu
+      >
+      <main>
+        <div class="wodList"><p>Testar lite text</p></div>
+        <button class="startBtn"><p id="btnText">Start</p></button>
+        <div class="clockWrapper">
+          <p id="minOne"></p>
+          <p id="secOne"></p>
 
-    <div class="btnMenu">
-      <button class="generateBtn"><p>Generate</p></button>
+          <p class="sec"></p>
+          <p class="min"></p>
+        </div>
+      </main>
+      <footer></footer>
     </div>
 
-    <div class="wodList"></div>
-    <div class="btnMenu">
-    <button class="startBtn"><p id="btnText">Start</button>
-  </div>
-
-  <div class="wrapper">
-
-<p id="minOne"></p> <p id="secOne"></p>
-
-    <p class="sec"> </p><p class="min"> </p>
-    
-  </div>
-    <footer><a class="ftr" href="https://twitter.com/c_vilander">Twitter</a>  <a class="ftr" href="https://github.com/ChristoferVilander">Github</a></footer>
-
-    <script src="./script.js"></script>
-  </body> 
+    <script src="script.js"></script>
+  </body>
 </html>
