@@ -4,7 +4,7 @@ function wodGenerator() {
     "Clean and Jerk x 6 (60%)",
     "Wallbals x 10 (9kg / 6kg)",
     "Pull Ups x 10",
-    "DL x 6 (60%)",
+    "Dead Lift x 6 (60%)",
     "Burpees x 10",
     "Kettlebell Swing x 5 (22.5kg / 17.55kg)",
     "Box Jump x 10",
@@ -35,7 +35,7 @@ function wodGenerator() {
     let timeCap = document.createElement("h2");
     timeCap.id = "tc";
     timeCap.className = "animate";
-    timeCap.innerHTML = "20 min AMRAP";
+    timeCap.innerHTML = "<h4>20 min AMRAP</h4>";
 
     ulItem.appendChild(timeCap);
 
@@ -93,8 +93,8 @@ function go() {
 
     sec++;
 
-    minDiv.innerHTML = "Min: " + min;
-    secDiv.innerHTML = "Sec: " + sec;
+    minDiv.innerHTML = "<h6>Min:</h6> " + min;
+    secDiv.innerHTML = "<h6>Sec:</h6> " + sec;
 
     if (min === 20) {
       clearInterval(timeRepeat);

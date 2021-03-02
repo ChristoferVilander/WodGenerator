@@ -16,7 +16,7 @@ body {
   width: 100%;
   font-family: ‘Arial Narrow’, sans-serif;
   font-weight: 100;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.911);
   background: url(../img/bg1.jpg) center no-repeat;
 }
 
@@ -39,6 +39,7 @@ header {
   font-size: 3.6rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  color: rgba(255, 255, 0, 0.904);
 }
 
 menu {
@@ -56,10 +57,10 @@ menu {
   border-radius: 0.5rem;
   outline: 0;
   background-color: transparent;
-  border: 0.01rem solid rgb(255, 255, 255);
+  border: 0.01rem solid rgba(255, 255, 0, 0.904);
   font-size: 1.8rem;
   cursor: pointer;
-  color: #fff;
+  color: rgba(255, 255, 0, 0.904);
 }
 
 main {
@@ -116,16 +117,18 @@ h2 {
   background-color: transparent;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #fff;
+  visibility: hidden;
+  color: rgba(255, 255, 0, 0.904);
 }
 
 .clockWrapper {
-  margin: 1rem 0 0 0;
+  margin: 2.5rem 0 0 0;
 }
 
 .min,
 .sec,
-p {
+p,
+h6 {
   display: inline;
 }
 
@@ -134,6 +137,16 @@ p {
   font-size: 3.2rem;
   font-weight: 100;
   padding: 0 0.5rem 0 0;
+  color: rgba(255, 255, 0, 0.904);
+}
+
+h4 {
+  color: rgba(255, 255, 0, 0.904);
+}
+
+h6 {
+  letter-spacing: 0.1rem;
+  color: #fff;
 }
 
 footer {
