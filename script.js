@@ -15,6 +15,14 @@ function wodGenerator() {
     "Push Ups x 20",
   ];
 
+  let variant = [
+    "20 min AMRAP",
+    "10 min AMRAP",
+    "4 Rounds, (Time Cap 20 min)",
+    "EMOM",
+    "30 min AMRAP",
+  ];
+
   let wodContainer = document.querySelector(".wodList");
   let ulItem = document.createElement("ul");
   ulItem.setAttribute("class", "ulist");
@@ -35,7 +43,7 @@ function wodGenerator() {
     let timeCap = document.createElement("h2");
     timeCap.id = "tc";
     timeCap.className = "animate";
-    timeCap.innerHTML = "<h4>20 min AMRAP</h4>";
+    timeCap.innerHTML = variant[Math.floor(Math.random() * variant.length)];
 
     ulItem.appendChild(timeCap);
 
