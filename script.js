@@ -15,7 +15,15 @@ function wodGenerator() {
     "Push Ups x 20",
   ];
 
-  let variant = [
+  let intermediate = [
+    "10 min AMRAP",
+    "5 min AMRAP",
+    "2 Rounds, (Time Cap 20 min)",
+    "EMOM",
+    "20 min AMRAP",
+  ];
+
+  let rx = [
     "20 min AMRAP",
     "10 min AMRAP",
     "4 Rounds, (Time Cap 20 min)",
@@ -36,16 +44,24 @@ function wodGenerator() {
     createList();
   }
 
-  // This function creates a list of 4 random workouts.
+  // This function creates a list of 4 random workouts. This part has a lot of duplicate code which will be fixed.
   function createList() {
     wodContainer.appendChild(ulItem);
 
-    let timeCap = document.createElement("h2");
-    timeCap.id = "tc";
-    timeCap.className = "animate";
-    timeCap.innerHTML = variant[Math.floor(Math.random() * variant.length)];
-
-    ulItem.appendChild(timeCap);
+    if (document.getElementById("inter").checked) {
+      let timeCap = document.createElement("h2");
+      timeCap.id = "tc";
+      timeCap.className = "animate";
+      timeCap.innerHTML =
+        intermediate[Math.floor(Math.random() * intermediate.length)];
+      ulItem.appendChild(timeCap);
+    } else if (document.getElementById("rx").checked) {
+      let timeCap = document.createElement("h2");
+      timeCap.id = "tc";
+      timeCap.className = "animate";
+      timeCap.innerHTML = rx[Math.floor(Math.random() * rx.length)];
+      ulItem.appendChild(timeCap);
+    }
 
     for (var i = 0; i < 4; i++) {
       let wodItem = document.createElement("li");

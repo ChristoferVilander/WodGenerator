@@ -12,11 +12,17 @@
       <header>
         <h1 class="logo">Workout Generator</h1>
       </header>
-      <menu
-        ><button class="generateBtn"><p>Generate</p></button></menu
+      <menu>
+        <div class="radio-btn">
+          <input type="radio" id="inter" value="male" />
+          <label class="rdo-style" for="inter">Intermediate</label>
+          <input type="radio" id="rx" value="male" />
+          <label class="rdo-style" for="rx">RX</label>
+        </div>
+        <button class="generateBtn"><p>Generate</p></button></menu
       >
       <main>
-        <div class="wodList"><p>Testar lite text</p></div>
+        <div class="wodList"></div>
         <button class="startBtn"><p id="btnText">Start</p></button>
         <div class="clockWrapper">
           <p id="minOne"></p>
