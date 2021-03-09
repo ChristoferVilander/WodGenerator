@@ -147,6 +147,20 @@ function go() {
   document.getElementById("stopp").onclick = stoppa;
 }
 
-let startBtn = document.querySelector(".startBtn");
+// Two functions which uncheck the checkbox
 
+function uncheckInter() {
+  inter.checked = false;
+}
+
+function uncheckRx() {
+  rx.checked = false;
+}
+
+let startBtn = document.querySelector(".startBtn");
+var checkInter = document.getElementById("inter");
+var checkRx = document.getElementById("rx");
 startBtn.onclick = go;
+
+rx.onclick = uncheckInter;
+inter.onclick = uncheckRx;
