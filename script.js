@@ -48,14 +48,20 @@ function wodGenerator() {
   function createList() {
     wodContainer.appendChild(ulItem);
 
-    if (document.getElementById("inter").checked) {
+    let interCheck = document.getElementById("inter");
+    let rxCheck = document.getElementById("rx");
+
+    if (interCheck.checked === false && rxCheck.checked === false) {
+      alert("Please choose a level");
+      return;
+    } else if (interCheck.checked) {
       let timeCap = document.createElement("h2");
       timeCap.id = "tc";
       timeCap.className = "animate";
       timeCap.innerHTML =
         intermediate[Math.floor(Math.random() * intermediate.length)];
       ulItem.appendChild(timeCap);
-    } else if (document.getElementById("rx").checked) {
+    } else if (rxCheck.checked) {
       let timeCap = document.createElement("h2");
       timeCap.id = "tc";
       timeCap.className = "animate";
