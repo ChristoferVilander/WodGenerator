@@ -142,8 +142,8 @@ function go() {
       if ((btnText.innerHTML = "Reset" && statement === true)) {
         let btnText = document.getElementById("btnText");
         btnText.innerHTML = "Start";
-        minDiv.innerHTML = "Min: " + "0";
-        secDiv.innerHTML = "Sec: " + "0";
+        minDiv.innerHTML = "<h6>Min:</h6> " + "0";
+        secDiv.innerHTML = "<h6>Sec:</h6> " + "0";
         statement = false;
       } else {
         go();
