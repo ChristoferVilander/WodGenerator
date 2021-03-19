@@ -7,23 +7,26 @@ button {
   border: none;
 }
 
-html {
+html,
+body {
   font-size: 62.5%; /* 1rem = 10px */
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  height: 100%;
-  width: 100%;
   font-family: ‘Arial Narrow’, sans-serif;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.911);
   background: url(../img/bg1.jpg) center no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
 }
 
 header {
@@ -45,14 +48,14 @@ menu {
   margin: 0 0 5rem 0;
   padding: 0;
   width: 100%;
-  height: 11rem;
+  height: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .radio-btn {
-  margin: 0 0 3rem 0;
+  margin: 0 0 4rem 0;
   padding: 0;
 }
 
@@ -105,6 +108,7 @@ li {
 
 ul {
   list-style: none;
+  padding: 1rem;
 }
 
 #tc {
@@ -162,10 +166,19 @@ h6 {
   color: #fff;
 }
 
-footer {
+.footer {
+  margin: 0;
+  padding: 0 0 2rem 0;
+  flex-shrink: 0;
   width: 100%;
+  text-align: center;
+}
+
+.footer a {
   margin: 0;
   padding: 0;
-  height: 1rem;
-  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.849);
+  margin: 1rem;
 }
