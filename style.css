@@ -18,9 +18,9 @@ body {
   font-family: ‘Arial Narrow’, sans-serif;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.911);
-  background: url(../img/bg1.jpg) center no-repeat;
   display: flex;
   flex-direction: column;
+  background: url(../img/bg1.jpg) center no-repeat;
 }
 
 .flex-container {

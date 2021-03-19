@@ -1,8 +1,8 @@
 # Workout of the Day Generator
 
-## Project Status 
+## Project Status
 
- :warning: The code currently has a lot of quick fixes which needs to be refactored
+:warning: Includes alot of quick fixes which needs to be refactored
 
 - In development
 
