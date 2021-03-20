@@ -18,7 +18,7 @@ function wodGenerator() {
   let intermediate = [
     "10 min AMRAP",
     "5 min AMRAP",
-    "2 Rounds, (Time Cap 20 min)",
+    "2 Rounds, (TC 10 min)",
     "EMOM",
     "20 min AMRAP",
   ];
@@ -123,8 +123,8 @@ function go() {
 
     sec++;
 
-    minDiv.innerHTML = "<h6>Min:</h6> " + min;
-    secDiv.innerHTML = "<h6>Sec:</h6> " + sec;
+    minDiv.innerHTML = "<h1>Min:</h1> " + min;
+    secDiv.innerHTML = "<h1>Sec:</h1> " + sec;
 
     if (min === 20) {
       clearInterval(timeRepeat);
@@ -142,8 +142,8 @@ function go() {
       if ((btnText.innerHTML = "Reset" && statement === true)) {
         let btnText = document.getElementById("btnText");
         btnText.innerHTML = "Start";
-        minDiv.innerHTML = "<h6>Min:</h6> " + "0";
-        secDiv.innerHTML = "<h6>Sec:</h6> " + "0";
+        minDiv.innerHTML = "<h1>Min:</h1> " + "0";
+        secDiv.innerHTML = "<h1>Sec:</h1> " + "0";
         statement = false;
       } else {
         go();

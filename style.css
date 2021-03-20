@@ -15,8 +15,7 @@ body {
 }
 
 body {
-  font-family: ‘Arial Narrow’, sans-serif;
-  font-weight: 100;
+  font-family: "Poppins", sans-serif;
   color: rgba(255, 255, 255, 0.911);
   display: flex;
   flex-direction: column;
@@ -30,95 +29,89 @@ body {
 }
 
 header {
+  margin: 4rem 0 0 0;
   width: 100%;
-  height: 15rem;
+  height: auto;
   display: flex;
   justify-content: center;
 }
 
-.logo {
-  margin: 0;
-  padding: 3.5rem 0 0 0;
-  font-size: 3.6rem;
-  font-weight: 100;
-  letter-spacing: 0.1rem;
+h1 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  display: inline;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 200;
 }
 
 menu {
-  margin: 0 0 5rem 0;
-  padding: 0;
+  margin: 4rem 0 0 0;
   width: 100%;
-  height: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.radio-btn {
-  margin: 0 0 4rem 0;
-  padding: 0;
 }
 
 #inter,
 #rx {
   height: 2.5rem;
   width: 2.5rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .rdo-style {
-  font-size: 1.8rem;
-  padding: 1rem;
+  font-size: 1.6rem;
 }
 
 .generateBtn {
-  margin: 0;
-  padding: 0;
+  margin: 2rem 0 0 0;
   width: 15rem;
   height: 5rem;
   border-radius: 0.5rem;
   outline: 0;
   background-color: transparent;
   border: 0.01rem solid #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
   color: #fff;
 }
 
 main {
+  padding: 0 2rem 0 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 0px solid red;
+  box-sizing: border-box;
 }
 
 .wodList {
-  width: 35rem;
-  height: 25rem;
-  padding: 0.5 rem;
+  margin: 6rem 0 0 0;
+  border: 0px solid red;
+  width: 100%;
 }
 
 li {
-  margin: 2rem 0 0 0;
-  padding: 0 0 1.2rem 0;
-  font-size: 1.8rem;
+  margin: 1rem 0 0 0;
+  padding: 0 0 0.5rem 0;
+  font-size: 1.6rem;
   text-shadow: 0 0 0.063rem #858585;
   border-bottom: 0.1rem solid #414141;
   opacity: 0;
+  font-weight: 100;
 }
 
 ul {
   list-style: none;
-  padding: 1rem;
 }
 
 #tc {
   opacity: 0;
 }
-
-h2 {
-  font-size: 1.8rem;
-}
-
 .animate {
   animation: fade 0.5s ease-in forwards;
 }
@@ -130,8 +123,7 @@ h2 {
 }
 
 .startBtn {
-  margin: 1rem 0 0 0;
-  padding: 0;
+  margin: 5rem 0 0 0;
   width: 15rem;
   height: 5rem;
   outline: 0;
@@ -143,7 +135,9 @@ h2 {
 }
 
 .clockWrapper {
-  margin: 2.5rem 0 0 0;
+  margin: 2rem 0 0 0;
+  width: 100%;
+  text-align: center;
 }
 
 .min,
@@ -151,6 +145,7 @@ h2 {
 p,
 h6 {
   display: inline;
+  font-weight: 200;
 }
 
 #secOne,
@@ -161,13 +156,7 @@ h6 {
   color: #fff;
 }
 
-h6 {
-  letter-spacing: 0.1rem;
-  color: #fff;
-}
-
 .footer {
-  margin: 0;
   padding: 0 0 2rem 0;
   flex-shrink: 0;
   width: 100%;
@@ -175,10 +164,9 @@ h6 {
 }
 
 .footer a {
-  margin: 0;
-  padding: 0;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 200;
   color: rgba(255, 255, 255, 0.849);
   margin: 1rem;
 }
