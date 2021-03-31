@@ -20,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   background: url(../img/bg1.jpg) center no-repeat;
+  letter-spacing: 1px;
 }
 
 .flex-container {
@@ -64,16 +65,17 @@ menu {
 
 .rdo-style {
   font-size: 1.6rem;
+  margin: 0 1.5rem 0 0;
 }
 
 .generateBtn {
-  margin: 2rem 0 0 0;
+  margin: 3rem 0 0 0;
   width: 15rem;
   height: 5rem;
   border-radius: 0.5rem;
   outline: 0;
   background-color: transparent;
-  border: 0.01rem solid #fff;
+  border: 1px solid #fff;
   font-size: 1.6rem;
   cursor: pointer;
   color: #fff;
@@ -87,6 +89,53 @@ main {
   align-items: center;
   border: 0px solid red;
   box-sizing: border-box;
+}
+
+.errorMessage {
+  margin: 3rem 0 0 0;
+  color: #fcff46;
+}
+
+.errorAnimation {
+  animation: bounce 1s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .wodList {

@@ -26,7 +26,7 @@ function wodGenerator() {
   let rx = [
     "20 min AMRAP",
     "10 min AMRAP",
-    "4 Rounds, (Time Cap 20 min)",
+    "4 Rounds (TC 20 min)",
     "EMOM",
     "30 min AMRAP",
   ];
@@ -47,14 +47,29 @@ function wodGenerator() {
   // This function creates a list of 4 random workouts. This part has a lot of duplicate code which will be fixed.
   function createList() {
     wodContainer.appendChild(ulItem);
-
+    let noChoice = document.createElement("h2");
+    noChoice.setAttribute("id", "errorId");
+    let errorMsg = document.querySelector(".errorMessage");
     let interCheck = document.getElementById("inter");
     let rxCheck = document.getElementById("rx");
 
-    if (interCheck.checked === false && rxCheck.checked === false) {
-      alert("Please choose a level");
+    if (
+      errorMsg.hasChildNodes() &&
+      interCheck.checked === false &&
+      rxCheck.checked === false
+    ) {
+      return;
+    } else if (interCheck.checked === false && rxCheck.checked === false) {
+      errorMsg.appendChild(noChoice);
+      noChoice.className = "errorAnimation";
+      noChoice.innerHTML = "Please choose an option";
+
       return;
     } else if (interCheck.checked) {
+      if (errorMsg.hasChildNodes()) {
+        document.getElementById("errorId").remove();
+      }
+
       let timeCap = document.createElement("h2");
       timeCap.id = "tc";
       timeCap.className = "animate";
@@ -164,8 +179,7 @@ function uncheckRx() {
 }
 
 let startBtn = document.querySelector(".startBtn");
-var checkInter = document.getElementById("inter");
-var checkRx = document.getElementById("rx");
+
 startBtn.onclick = go;
 
 rx.onclick = uncheckInter;
