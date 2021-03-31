@@ -1,3 +1,25 @@
+// Menu Start
+
+(function () {
+  var dropdown = document.getElementById("dropdown"),
+    content = document.getElementById("content"),
+    button = document.getElementById("button");
+
+  button.onclick = function () {
+    if (dropdown.style.height === "10rem") {
+      dropdown.style.height = "0";
+      content.style.opacity = "0";
+    } else {
+      dropdown.style.height = "10rem";
+      dropdown.style.transition = "height 0.5s";
+      content.style.transition = "opacity 0.5s";
+      content.style.opacity = "1";
+    }
+  };
+})();
+
+// Menu End
+
 function wodGenerator() {
   let workouts = [
     "Snatch x 6 (60%)",
