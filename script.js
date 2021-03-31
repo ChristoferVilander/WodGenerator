@@ -45,7 +45,7 @@ function wodGenerator() {
   // This function creates a list of 4 random workouts. This part has a lot of duplicate code which will be fixed.
   function createList() {
     wodContainer.appendChild(ulItem);
-    let noChoice = document.createElement("h2");
+    let noChoice = document.createElement("h3");
     noChoice.setAttribute("id", "errorId");
     let errorMsg = document.querySelector(".errorMessage");
     let interCheck = document.getElementById("inter");
