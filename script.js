@@ -17,9 +17,8 @@ function wodGenerator() {
 
   let intermediate = [
     "10 min AMRAP",
-    "5 min AMRAP",
-    "2 Rounds, (TC 10 min)",
-    "EMOM",
+    "4 Rounds, (TC 10 min)",
+    "EMOM, 10 min",
     "20 min AMRAP",
   ];
 
@@ -27,8 +26,7 @@ function wodGenerator() {
     "20 min AMRAP",
     "10 min AMRAP",
     "4 Rounds (TC 20 min)",
-    "EMOM",
-    "30 min AMRAP",
+    "EMOM, 20 min",
   ];
 
   let wodContainer = document.querySelector(".wodList");
@@ -131,6 +129,13 @@ function go() {
   btnText.innerHTML = "Stop";
 
   function timer() {
+    let g = document.getElementById("tc");
+    let time = 10;
+    if (g.innerHTML.includes("20")) {
+      time = 20;
+    } else {
+      time = 10;
+    }
     if (sec === 60) {
       min++;
       sec = 0;
@@ -141,7 +146,7 @@ function go() {
     minDiv.innerHTML = "<h1>Min:</h1> " + min;
     secDiv.innerHTML = "<h1>Sec:</h1> " + sec;
 
-    if (min === 20) {
+    if (min === time) {
       clearInterval(timeRepeat);
       minDiv.innerHTML = "";
       secDiv.innerHTML = "Time is Up!";
