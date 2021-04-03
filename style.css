@@ -44,7 +44,7 @@ header {
   cursor: pointer;
 }
 
-#dropdown {
+#hamburger {
   transition: 0.5s;
   cursor: pointer;
   overflow: hidden;

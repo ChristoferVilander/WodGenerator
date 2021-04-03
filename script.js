@@ -1,24 +1,24 @@
-// Menu Start
+// Hamburger Menu
 
 (function () {
-  var dropdown = document.getElementById("dropdown"),
+  let hamburger = document.getElementById("hamburger"),
     content = document.getElementById("content"),
     button = document.getElementById("button");
 
   button.onclick = function () {
-    if (dropdown.style.height === "10rem") {
-      dropdown.style.height = "0";
+    if (hamburger.style.height === "10rem") {
+      hamburger.style.height = "0";
       content.style.opacity = "0";
     } else {
-      dropdown.style.height = "10rem";
-      dropdown.style.transition = "height 0.5s";
+      hamburger.style.height = "10rem";
+      hamburger.style.transition = "height 0.5s";
       content.style.transition = "opacity 0.5s";
       content.style.opacity = "1";
     }
   };
 })();
 
-// Menu End
+// Hamburger End
 
 function wodGenerator() {
   let workouts = [
@@ -85,7 +85,7 @@ function wodGenerator() {
       noChoice.innerHTML = "Please choose an option";
 
       return;
-    } else if (interCheck.checked) {
+    } else if (interCheck.checked || rxCheck.checked) {
       if (errorMsg.hasChildNodes()) {
         document.getElementById("errorId").remove();
       }
