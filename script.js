@@ -1,11 +1,11 @@
 // Hamburger Menu
 
-(function () {
+function bls() {
   let hamburger = document.getElementById("hamburger"),
     content = document.getElementById("content"),
     button = document.getElementById("button");
 
-  button.onclick = function () {
+  button.onclick = function nm() {
     if (hamburger.style.height === "10rem") {
       hamburger.style.height = "0";
       content.style.opacity = "0";
@@ -16,7 +16,9 @@
       content.style.opacity = "1";
     }
   };
-})();
+}
+
+bls();
 
 // Hamburger End
 
@@ -119,19 +121,13 @@ function wodGenerator() {
   }
 
   function saveWod() {
-    // Saves the latest generated WOD to Local Storage
-    localStorage.setItem("savedItems", wodContainer.innerHTML);
+    // wodContainer the latest generated WOD to Local Storage
+    localStorage.setItem("1. Workout", wodContainer.innerHTML);
   }
   saveWod();
 }
 
 // Restores latest WOD from Local Storage
-function restoreWod() {
-  let wodContainer = document.querySelector(".wodList");
-  wodContainer.innerHTML = localStorage.getItem("savedItems");
-}
-
-restoreWod();
 
 // Clicking the button executes the function wodGenerator
 let generatebutton = document.querySelector(".generateBtn");
@@ -211,3 +207,25 @@ startBtn.onclick = go;
 
 rx.onclick = uncheckInter;
 inter.onclick = uncheckRx;
+
+function savedList() {
+  let ulID = document.querySelector(".ulist");
+  let wodContainer = document.querySelector(".wodList");
+  let savedItem = document.createElement("h2");
+  savedItem.innerHTML = localStorage.key(0);
+  wodContainer.removeChild(ulID);
+  wodContainer.appendChild(savedItem);
+
+  function restoreWod() {
+    let wodContainer = document.querySelector(".wodList");
+    wodContainer.innerHTML = localStorage.getItem("1. Workout");
+    startBtn.style.visibility = "visible";
+    let hamburger = document.getElementById("hamburger");
+    hamburger.style.height = "0";
+  }
+
+  savedItem.onclick = restoreWod;
+}
+
+let savesLink = document.getElementById("savesLink");
+savesLink.onclick = savedList;
