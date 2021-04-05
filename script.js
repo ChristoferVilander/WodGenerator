@@ -214,7 +214,7 @@ function savedList() {
   let savedItem = document.createElement("h2");
   savedItem.innerHTML = localStorage.key(0);
 
-  if (wodContainer.hasChildNodes === ulID) {
+  if (wodContainer.hasChildNodes) {
     ulID.remove();
   }
 
