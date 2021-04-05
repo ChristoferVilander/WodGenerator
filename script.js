@@ -213,15 +213,19 @@ function savedList() {
   let wodContainer = document.querySelector(".wodList");
   let savedItem = document.createElement("h2");
   savedItem.innerHTML = localStorage.key(0);
-  wodContainer.removeChild(ulID);
+
+  if (wodContainer.hasChildNodes === ulID) {
+    ulID.remove();
+  }
+
   wodContainer.appendChild(savedItem);
+  let hamburger = document.getElementById("hamburger");
+  hamburger.style.height = "0";
 
   function restoreWod() {
     let wodContainer = document.querySelector(".wodList");
     wodContainer.innerHTML = localStorage.getItem("1. Workout");
     startBtn.style.visibility = "visible";
-    let hamburger = document.getElementById("hamburger");
-    hamburger.style.height = "0";
   }
 
   savedItem.onclick = restoreWod;
