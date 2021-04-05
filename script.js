@@ -60,7 +60,7 @@ function wodGenerator() {
 
   // If id 'ulist' exists it gets removed and then the createList function is executed, else it runs the createList straight away
   if (wodContainer.hasChildNodes()) {
-    ulID.remove();
+    wodContainer.innerHTML = "";
     createList();
   } else {
     createList();
@@ -215,7 +215,7 @@ function savedList() {
   savedItem.innerHTML = localStorage.key(0);
 
   if (wodContainer.hasChildNodes) {
-    ulID.remove();
+    wodContainer.innerHTML = "";
   }
 
   wodContainer.appendChild(savedItem);
