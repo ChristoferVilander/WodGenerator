@@ -122,9 +122,10 @@ function wodGenerator() {
 
   function saveWod() {
     // wodContainer the latest generated WOD to Local Storage
-    localStorage.setItem("1. Workout", wodContainer.innerHTML);
+    localStorage.setItem("Workout Nr 1", wodContainer.innerHTML);
   }
-  saveWod();
+  let saveBtn = document.getElementById("savebtn");
+  saveBtn.onclick = saveWod;
 }
 
 // Restores latest WOD from Local Storage
@@ -224,7 +225,7 @@ function savedList() {
 
   function restoreWod() {
     let wodContainer = document.querySelector(".wodList");
-    wodContainer.innerHTML = localStorage.getItem("1. Workout");
+    wodContainer.innerHTML = localStorage.getItem(localStorage.key(0));
     startBtn.style.visibility = "visible";
   }
 
