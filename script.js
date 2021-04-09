@@ -1,5 +1,7 @@
 // Hamburger Menu
 
+let savedName;
+
 function bls() {
   let hamburger = document.getElementById("hamburger"),
     content = document.getElementById("content"),
@@ -122,6 +124,7 @@ function wodGenerator() {
 
       function saveWod() {
         // wodContainer the latest generated WOD to Local Storage
+        savedName = prompt("Name this WOD");
         localStorage.setItem("Workout Nr 1", wodContainer.innerHTML);
       }
 
@@ -215,7 +218,7 @@ function savedList() {
   let ulID = document.querySelector(".ulist");
   let wodContainer = document.querySelector(".wodList");
   let savedItem = document.createElement("h2");
-  savedItem.innerHTML = localStorage.key(0);
+  savedItem.innerHTML = savedName;
 
   if (wodContainer.hasChildNodes) {
     wodContainer.innerHTML = "";
