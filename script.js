@@ -110,6 +110,7 @@ function wodGenerator() {
       let wodItem = document.createElement("li");
       let shuffle = workouts[Math.floor(Math.random() * workouts.length)];
       let arrayIndex = workouts.indexOf(shuffle);
+      let saveBtn = document.getElementById("savebtn");
 
       workouts.splice(arrayIndex, 1); // Removes shuffled items to prevent duplicates
 
@@ -117,15 +118,16 @@ function wodGenerator() {
 
       ulItem.appendChild(wodItem).className = "animate";
       startBtn.style.visibility = "visible";
+      saveBtn.style.visibility = "visible";
+
+      function saveWod() {
+        // wodContainer the latest generated WOD to Local Storage
+        localStorage.setItem("Workout Nr 1", wodContainer.innerHTML);
+      }
+
+      saveBtn.onclick = saveWod;
     }
   }
-
-  function saveWod() {
-    // wodContainer the latest generated WOD to Local Storage
-    localStorage.setItem("Workout Nr 1", wodContainer.innerHTML);
-  }
-  let saveBtn = document.getElementById("savebtn");
-  saveBtn.onclick = saveWod;
 }
 
 // Restores latest WOD from Local Storage

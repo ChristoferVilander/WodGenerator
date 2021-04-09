@@ -53,8 +53,6 @@ header {
 
 #content {
   list-style: none;
-  margin: 0;
-  padding: 0.5rem 0.5rem 0 0.5rem;
   opacity: 0;
 }
 
@@ -123,12 +121,11 @@ menu {
 }
 
 main {
-  padding: 0 2rem 0 2rem;
+  padding: 0 1.5rem 0 1.5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 0px solid red;
   box-sizing: border-box;
 }
 
@@ -185,7 +182,7 @@ main {
 
 .wodList {
   margin: 3rem 0 0 0;
-  height: 24rem;
+  height: 23rem;
   width: 100%;
 }
 
@@ -193,6 +190,7 @@ main {
   font-size: 1.6rem;
   text-decoration: underline;
   color: yellow;
+  visibility: hidden;
 }
 
 li {
@@ -225,7 +223,7 @@ ul {
 }
 
 .startBtn {
-  margin: 5rem 0 0 0;
+  margin: 3.5rem 0 0 0;
   width: 15rem;
   height: 5rem;
   outline: 0;
