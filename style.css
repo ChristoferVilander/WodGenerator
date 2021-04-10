@@ -10,7 +10,7 @@ button {
 html,
 body {
   font-size: 62.5%; /* 1rem = 10px */
-  height: 100%;
+  height: vh;
   width: 100%;
 }
 
@@ -259,7 +259,9 @@ h6 {
 }
 
 .footer {
-  padding: 0 0 2rem 0;
+  position: fixed;
+  bottom: 0;
+  padding: 0 0 1rem 0;
   flex-shrink: 0;
   width: 100%;
   text-align: center;

@@ -218,7 +218,7 @@ function savedList() {
   let ulID = document.querySelector(".ulist");
   let wodContainer = document.querySelector(".wodList");
   let savedItem = document.createElement("h2");
-  savedItem.innerHTML = savedName;
+  savedItem.textContent = savedName;
 
   if (wodContainer.hasChildNodes) {
     wodContainer.innerHTML = "";
