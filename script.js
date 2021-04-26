@@ -119,8 +119,10 @@ function wodGenerator() {
       wodItem.innerHTML = shuffle;
 
       ulItem.appendChild(wodItem).className = "animate";
-      startBtn.style.visibility = "visible";
-      saveBtn.style.visibility = "visible";
+      let test = document.getElementById("animation");
+      test.className = "animate";
+      //startBtn.style.visibility = "visible";
+      //saveBtn.style.visibility = "visible";
 
       function saveWod() {
         // wodContainer the latest generated WOD to Local Storage
@@ -218,6 +220,7 @@ function savedList() {
   let ulID = document.querySelector(".ulist");
   let wodContainer = document.querySelector(".wodList");
   let savedItem = document.createElement("h2");
+
   savedItem.textContent = savedName;
 
   if (wodContainer.hasChildNodes) {
